@@ -408,3 +408,5 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .lightbox { padding: 4rem 1rem; }
   .lightbox__prev, .lightbox__next { top: auto; bottom: 1.2rem; transform: none; }
 }
+.footer__credit { margin-left: .4rem; }
+.footer__credit strong { color: var(--gold-2); font-weight: 700; }
