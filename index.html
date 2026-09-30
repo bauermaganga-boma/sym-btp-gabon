@@ -402,6 +402,7 @@
       <ul class="coords">
         <li class="reveal"><span class="coords__icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><small>Siège</small>Akanda — Libreville, Gabon</div></li>
         <li class="reveal"><span class="coords__icon"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><div><small>Téléphone</small><a href="tel:+241066556029">+241 066 55 60 29</a><br><a href="tel:+241076300400">+241 076 30 04 00</a></div></li>
+        <li class="reveal"><span class="coords__icon coords__icon--wa"><svg viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.5c0 3.5 2.5 6.5 6.5 6.8l1-1.6-2-1-1 1c-1.2-.5-2.2-1.5-2.7-2.7l1-1-1-2-1.6.9"/></svg></span><div><small>WhatsApp</small><a href="https://wa.me/241066556029?text=Bonjour%20SY%27M%20BTP%20GABON%2C%20je%20souhaite%20des%20informations%20sur%20un%20projet." target="_blank" rel="noopener">Écrivez-nous sur WhatsApp</a></div></li>
         <li class="reveal"><span class="coords__icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div><small>Courriel</small><a href="mailto:symbtp@gmail.com">symbtp@gmail.com</a></div></li>
       </ul>
       <a href="SYM_BTP_GABON_Presentation_institutionnelle.pdf" class="btn btn--ghost contact__pdf reveal" download>Télécharger notre présentation (PDF)</a>
@@ -461,6 +462,34 @@
   <button class="lightbox__nav lightbox__next" aria-label="Image suivante">&#8250;</button>
 </div>
 
+<!-- Contact rapide : WhatsApp + assistant -->
+<div class="fab" id="fab">
+  <a class="fab__btn fab__btn--wa" id="fab-wa" href="https://wa.me/241066556029?text=Bonjour%20SY%27M%20BTP%20GABON%2C%20je%20souhaite%20des%20informations%20sur%20un%20projet." target="_blank" rel="noopener" aria-label="Nous écrire sur WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.5-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.8 5.2 2.2.9 3 1 4.1.8.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
+    <span class="fab__label">WhatsApp</span>
+  </a>
+  <button class="fab__btn fab__btn--chat" id="chat-toggle" aria-label="Poser une question à l'assistant" aria-expanded="false" aria-controls="chat">
+    <svg viewBox="0 0 24 24" aria-hidden="true" class="fab__ico-open"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>
+    <svg viewBox="0 0 24 24" aria-hidden="true" class="fab__ico-close"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    <span class="fab__label">Une question ?</span>
+  </button>
+</div>
+
+<section class="chat" id="chat" role="dialog" aria-label="Assistant SY'M BTP GABON" aria-hidden="true">
+  <header class="chat__head">
+    <img src="assets/img/logo.png" alt="" class="chat__logo">
+    <div><strong>Assistant SY'M BTP</strong><span><i></i>Répond en direct · 24h/24</span></div>
+    <button class="chat__close" id="chat-close" aria-label="Fermer l'assistant">&times;</button>
+  </header>
+  <div class="chat__body" id="chat-body" aria-live="polite"></div>
+  <div class="chat__chips" id="chat-chips"></div>
+  <form class="chat__form" id="chat-form" autocomplete="off">
+    <input type="text" id="chat-input" placeholder="Posez votre question…" aria-label="Votre question" maxlength="300">
+    <button type="submit" aria-label="Envoyer"><svg viewBox="0 0 24 24"><path d="M4 12l16-8-6 16-2.5-6.5z"/></svg></button>
+  </form>
+</section>
+
 <script src="assets/js/main.js"></script>
+<script src="assets/js/assistant.js"></script>
 </body>
 </html>
